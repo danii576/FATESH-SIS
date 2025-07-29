@@ -209,6 +209,15 @@ h2::after {
   font-size: 0.9rem;
   color: #7a2b5d;
 }
+.footer-bottom {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  background-color: #ffd6e6;
+  color: #4a0033;
+  font-weight: 500;
+  border-top: 1px solid #ffb6c1;
+}
 
 /* Adjust padding for smaller screens to shift slightly left */
 @media (max-width: 480px) {
