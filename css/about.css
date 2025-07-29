@@ -1,0 +1,259 @@
+/* === Responsive Navbar === */
+nav {
+  background-color: white;
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Logo Section */
+.logo img {
+  width: 120px;
+  height: auto;
+}
+
+/* Nav Links (centered in larger screens) */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+}
+
+.nav-links li {
+  cursor: pointer;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ff69b4;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Language Selector (right aligned) */
+.language-switcher {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+/* Language Flags */
+.flag {
+  vertical-align: middle;
+  width: 22px;
+  height: 20px;
+  margin-left: 5px;
+  position: relative;
+  top: 0;
+}
+
+.active-lang {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff0f6;
+  color: #4a0033;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main section for About */
+main.about-section {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(to bottom, #ffe6f0, #fff0f6);
+}
+
+main.about-section h1 {
+  font-size: 2.5rem;
+  color: #d63384;
+  margin-bottom: 1rem;
+}
+
+main.about-section p {
+  max-width: 800px;
+  margin: 1rem auto;
+  font-size: 1.1rem;
+  color: #7a2b5d;
+}
+
+/* Section Headings */
+h2 {
+  font-size: 2rem;
+  color: #cc2e73;
+  text-align: center;
+  margin: 4rem 0 1.5rem;
+  position: relative;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #ff69b4;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+/* Footer */
+.footer {
+  background-color: #ffd6e6;
+  padding: 3rem 1rem;
+  color: #4a0033;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+}
+
+.footer-logo {
+  width: 150px;
+  height: 150;
+  position: relative;
+  left: 100px;
+}
+
+.footer-left p {
+  max-width: 400px;
+  font-size: 1rem;
+  color: #6a1b4d;
+}
+
+.footer-branch h4 {
+  margin-bottom: 1rem;
+  color: #d63384;
+  font-size: 1.3rem;
+}
+
+.footer-branch ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-branch li {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-branch a {
+  color: #7a2b5d;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-branch a:hover {
+  color: #e60073;
+}
+
+.social-icons a {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  color: #d63384;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ff1a8c;
+}
+.about-hero-container {
+  max-width: 100%;
+  padding: 0 15px; /* default side padding */
+  box-sizing: border-box;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  display: block;
+  object-fit: cover;
+}
+.footer-credits {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #7a2b5d;
+}
+
+/* Adjust padding for smaller screens to shift slightly left */
+@media (max-width: 480px) {
+  .about-hero-container {
+    padding-left: 5px;
+  }
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .box {
+    padding: 15px;
+  }
+}
+
+/* === Responsive Behavior === */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links,
+  .language-switcher {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+}
